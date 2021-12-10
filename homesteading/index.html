@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Hearty Homesteading</title>
+  </head>
+  <body>
+    <header class="title"><h1>Hearty Homesteading</h1></header>
+    <div class= "content">
+      <div class="input-container">
+        <form id="form">
+          <div>
+            <label for="item-input">New Item</label>
+            <input type="text" id="item-input">
+          </div>
+          <div>
+            <label for="amount">Quantity</label>
+            <input type="number" name="amount" id="amount">
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date">
+          </div>
+          <!-- <div>
+            <label for="weight">Weight/Volume</label>
+            <input type="text" name="weight" id="weight">
+          </div> -->
+          
+          <button type="submit" class="addBtn">Add Item</button>
+        </form>
+      </div>
+
+      <!-- inventory list container -->
+      <div class="inventory-container">
+        <table class="table">
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Date</th>
+            <th>Dlt</th>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+    
+
+    <!-- table data template -->
+    <template id="table-template">
+      <tr class="table-row">
+        <td class="item-template"></td>
+        <td >
+          <button class= "btn increaseBtn">+</button>
+          <div class="qty-template"></div>
+          <button class="btn decreaseBtn">-</button>
+        </td>
+        <td class="date-template"></td>
+        <td><button class="btn deleteBtn">-</button></td>
+      </tr>  
+    </template>
+  </body>
+</html>
